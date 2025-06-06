@@ -13,9 +13,10 @@ public class Book
     private int copiesReserved;
     private int copiesAvailableInStock;
     private int totalCopies;
+    private boolean isAvailable;
 
     //constructor
-    public Book(String title, String author, int pages, double price, String genre, int isbn, Date date, int copiesSold, int copiesReserved, int copiesAvailableInStock, int totalCopies)
+    public Book(String title, String author, int pages, double price, String genre, int isbn, Date date, int copiesSold, int copiesReserved, int copiesAvailableInStock, int totalCopies, boolean isAvailable)
     {
         this.title = title;
         this.author = author;
@@ -28,8 +29,20 @@ public class Book
         this.copiesReserved = copiesReserved;
         this.copiesAvailableInStock = copiesAvailableInStock;
         this.totalCopies = totalCopies;
+        this.isAvailable = isAvailable;
     }
 
+
+    public String toString()
+    {
+        return  "Title: " + this.title +
+                "Author: " + this.author +
+                "Pages: " + this.pages +
+                "Price " + this.price +
+                "Genre: " + this.genre +
+                ""
+                ;
+    }
 
     //getters
     public String getTitle()
@@ -60,6 +73,10 @@ public class Book
     public Date getDate()
     {
         return date;
+    }
+    public boolean getIsAvaliable()
+    {
+        return isAvailable;
     }
     public int getCopiesSold()
     {
@@ -123,5 +140,9 @@ public class Book
     public void setTotalCopies(int totalCopies)
     {
         this.totalCopies = totalCopies;
+    }
+    public void setIsAvaliable(boolean isAvailable)
+    {
+        this.isAvailable = isAvailable;
     }
 }
