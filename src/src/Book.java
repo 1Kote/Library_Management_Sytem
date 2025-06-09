@@ -1,47 +1,39 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Book
 {
     private String title;
     private String author;
     private int pages;
-    private double price;
     private String genre;
-    private int isbn;
-    private Date date;
-    private int copiesSold;
-    private int copiesReserved;
+    private String isbn;
+    private LocalDate publicationDate;
     private int copiesAvailableInStock;
     private int totalCopies;
-    private boolean isAvailable;
 
     //constructor
-    public Book(String title, String author, int pages, double price, String genre, int isbn, Date date, int copiesSold, int copiesReserved, int copiesAvailableInStock, int totalCopies, boolean isAvailable)
+    public Book(String title, String author, int pages, String genre, String isbn, LocalDate publicationDate, int copiesAvailableInStock, int totalCopies)
     {
         this.title = title;
         this.author = author;
         this.pages = pages;
-        this.price = price;
         this.genre = genre;
         this.isbn = isbn;
-        this.date = date;
-        this.copiesSold = copiesSold;
-        this.copiesReserved = copiesReserved;
+        this.publicationDate = publicationDate;
         this.copiesAvailableInStock = copiesAvailableInStock;
         this.totalCopies = totalCopies;
-        this.isAvailable = isAvailable;
     }
 
 
     public String toString()
     {
-        return  "Title: " + this.title +
-                "Author: " + this.author +
-                "Pages: " + this.pages +
-                "Price " + this.price +
-                "Genre: " + this.genre +
-                ""
-                ;
+        return  "ISBN: " + this.getIsbn() +
+                "\nTitle: " + this.getTitle() +
+                "\nAuthor: " + this.getAuthor() +
+                "\nPages: " + this.getPages() +
+                "\nGenre: " + this.getGenre() +
+                "\nCopies avaliable in Stock: " + this.getCopiesAvailableInStock() +
+                "\nPublication Date: " + this.getPublicationDate();
     }
 
     //getters
@@ -49,7 +41,6 @@ public class Book
     {
         return title;
     }
-
     public String getAuthor()
     {
         return author;
@@ -58,33 +49,17 @@ public class Book
     {
         return pages;
     }
-    public double getPrice()
-    {
-        return price;
-    }
     public String getGenre()
     {
         return genre;
     }
-    public int getIsbn()
+    public String getIsbn()
     {
         return isbn;
     }
-    public Date getDate()
+    public LocalDate getPublicationDate()
     {
-        return date;
-    }
-    public boolean getIsAvaliable()
-    {
-        return isAvailable;
-    }
-    public int getCopiesSold()
-    {
-        return copiesSold;
-    }
-    public int getCopiesReserved()
-    {
-        return copiesReserved;
+        return publicationDate;
     }
     public int getCopiesAvailableInStock()
     {
@@ -108,30 +83,17 @@ public class Book
     {
         this.pages = pages;
     }
-    public void setPrice(double price)
-    {
-        this.price = price;
-    }
     public void setGenre(String genre)
     {
         this.genre = genre;
     }
-    public void setDate(Date date)
+    public void setDate(LocalDate publicationDate)
     {
-       this.date = date;
+       this.publicationDate = publicationDate;
     }
-    public void setIsbn(int isbn)
+    public void setIsbn(String isbn)
     {
         this.isbn = isbn;
-    }
-
-    public void setCopiesSold(int copiesSold)
-    {
-        this.copiesSold = copiesSold;
-    }
-    public void setCopiesReserved(int copiesReserved)
-    {
-        this.copiesReserved = copiesReserved;
     }
     public void setCopiesAvailableINStock(int copiesAvailableInStock)
     {
@@ -141,8 +103,9 @@ public class Book
     {
         this.totalCopies = totalCopies;
     }
-    public void setIsAvaliable(boolean isAvailable)
+
+    public void bookSearch()
     {
-        this.isAvailable = isAvailable;
+
     }
 }
