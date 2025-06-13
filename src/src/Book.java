@@ -12,7 +12,8 @@ public class Book
     private int totalCopies;
 
     //constructor
-    public Book(String title, String author, int pages, String genre, String isbn, LocalDate publicationDate, int copiesAvailableInStock, int totalCopies)
+    public Book(String title, String author, int pages, String genre, String isbn,
+                LocalDate publicationDate, int copiesAvailableInStock, int totalCopies)
     {
         this.title = title;
         this.author = author;
@@ -22,18 +23,6 @@ public class Book
         this.publicationDate = publicationDate;
         this.copiesAvailableInStock = copiesAvailableInStock;
         this.totalCopies = totalCopies;
-    }
-
-
-    public String toString()
-    {
-        return  "ISBN: " + this.getIsbn() +
-                "\nTitle: " + this.getTitle() +
-                "\nAuthor: " + this.getAuthor() +
-                "\nPages: " + this.getPages() +
-                "\nGenre: " + this.getGenre() +
-                "\nCopies avaliable in Stock: " + this.getCopiesAvailableInStock() +
-                "\nPublication Date: " + this.getPublicationDate();
     }
 
     //getters
@@ -104,8 +93,20 @@ public class Book
         this.totalCopies = totalCopies;
     }
 
-    public void bookSearch()
+    public void bookSearch(String bookName)
     {
 
+    }
+
+    //formatação String
+    public String toString()
+    {
+        return  "\nISBN: " + this.getIsbn() +
+                "\nTitle: " + this.getTitle() +
+                "\nAuthor: " + this.getAuthor() +
+                "\nPages: " + this.getPages() +
+                "\nGenre: " + this.getGenre() +
+                "\nCopies avaliable in Stock: " + this.getCopiesAvailableInStock() +
+                "\nPublication Date: " + this.getPublicationDate();
     }
 }
