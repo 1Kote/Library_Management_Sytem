@@ -1,4 +1,3 @@
-import java.awt.color.ICC_ColorSpace;
 
 public class Client
 {
@@ -46,7 +45,7 @@ public class Client
     {
         this.email = email;
     }
-    public void setPhoneUmber(String phoneNumber)
+    public void setPhoneNumber(String phoneNumber)
     {
         this.phoneNumber = phoneNumber;
     }
@@ -57,8 +56,7 @@ public class Client
                 "\nNome: " + this.getName() +
                 "\nCPF: " + this.getCpf() +
                 "\nEmail: " + this.getEmail() +
-                "\nphoneNumber" + this.getPhoneNumber() +
-                "\n-------------------------";
+                "\nphoneNumber" + this.getPhoneNumber();
 
     }
 }

@@ -15,7 +15,6 @@ public class Loan
         this.client = client;
         this.loanDate = loanDate;
         this.expectedReturnDate = expectedReturnDate;
-        this.realReturnDate = realReturnDate;
         this.delayFee = delayFee;
     }
 
@@ -66,9 +65,8 @@ public class Loan
     {
         return  "\n-------Dados do aluguel--------" +
                 "\nLivro Alugado: " + this.getBook() +
-                "\nCliente: " + this.getClient() +
+                "\n" + this.getClient() +
                 "\nData de Aluguel: " + this.getLoanDate() +
-                "\nVencimento do Aluguel: " + this.getExpectedReturnDate() +
-                "\n---------------------------------";
+                "\nVencimento do Aluguel: " + this.getExpectedReturnDate();
     }
 }
